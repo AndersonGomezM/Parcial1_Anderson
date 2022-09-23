@@ -1,16 +1,11 @@
-package edu.ucne.parcial1_anderson.ui.home
+package edu.ucne.parcial1_anderson.ui.navigation
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import edu.ucne.parcial1_anderson.data.entity.RegistroEntity
-import edu.ucne.parcial1_anderson.ui.registro_list.RegistroList
 
 
 @OptIn(ExperimentalMaterialApi::class)
