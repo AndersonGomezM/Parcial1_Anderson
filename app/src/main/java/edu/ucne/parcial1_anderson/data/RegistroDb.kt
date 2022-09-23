@@ -12,7 +12,7 @@ import edu.ucne.parcial1_anderson.data.entity.RegistroEntity
     exportSchema = false
 )
 abstract class RegistroDb : RoomDatabase() {
-    abstract val registroDao: String
+    /*abstract val registroDao: String*/
 
     companion object {
         @Volatile

@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Dao
+/*@Dao*/
 @Entity(tableName = "Registros")
 class RegistroEntity (
     @PrimaryKey(autoGenerate = true)
