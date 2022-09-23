@@ -7,8 +7,6 @@ import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 
-
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun HomeScreen(
     onClickRegistro: () -> Unit
