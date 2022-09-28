@@ -13,10 +13,10 @@ interface ArticuloDao {
     @Update
     suspend fun modificarArticulo(articulo: ArticuloEntity)
 
-    @Query("SELECT * " +
-            "FROM Articulos " +
-            "WHERE articuloId = :id " +
-            "LIMIT 1")
+    @Query("""SELECT *
+            FROM Articulos
+            WHERE articuloId = :id
+            LIMIT 1""")
     fun getArticulo(id: Int): Flow<ArticuloEntity>
 
 
