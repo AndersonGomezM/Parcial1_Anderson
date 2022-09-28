@@ -4,12 +4,12 @@ import androidx.room.Dao
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-/*@Dao*/
-@Entity(tableName = "Registros")
+@Dao
+@Entity(tableName = "Articulos")
 class ArticuloEntity (
     @PrimaryKey(autoGenerate = true)
-    val registroId: Int = 0,
-    val variable1: String,
-    val variable2: String,
-    val num: Double
+    val articuloId: Int = 0,
+    val descripcion: String,
+    val marca: String,
+    val existencia: Double
 )
