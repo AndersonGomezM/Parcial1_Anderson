@@ -2,6 +2,7 @@ package edu.ucne.parcial1_anderson.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import edu.ucne.parcial1_anderson.data.dao.ArticuloDao
 import edu.ucne.parcial1_anderson.data.entity.ArticuloEntity
 
 @Database(
@@ -10,6 +11,5 @@ import edu.ucne.parcial1_anderson.data.entity.ArticuloEntity
     exportSchema = false
 )
 abstract class ArticuloDb : RoomDatabase() {
-    /*abstract val registroDao: String*/
-
+    abstract val articuloDao: ArticuloDao
 }
