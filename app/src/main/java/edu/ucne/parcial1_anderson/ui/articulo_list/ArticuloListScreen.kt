@@ -28,7 +28,7 @@ fun ArticuloListScreen (
     Scaffold (
         floatingActionButton = {
             FloatingActionButton(onClick = onClick) {
-                Icon(imageVector = Icons.Default.Add, contentDescription = "Inserta un registro")
+                Icon(imageVector = Icons.Default.Add, contentDescription = "Inserta un articulo")
             }
         }
     ){
@@ -39,7 +39,7 @@ fun ArticuloListScreen (
             .padding(it)
         ) {
             ArticuloList(
-                articulos = uiState.registros,
+                articulos = uiState.articulos,
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(it)
@@ -76,7 +76,7 @@ fun ArticuloRow(articulo: ArticuloEntity) {
             Row() {
                 Spacer(modifier = Modifier.width(15.dp))
                 Text(
-                    text = articulo.variable1,
+                    text = articulo.descripcion,
                     style = MaterialTheme.typography.titleLarge
                 )
             }
@@ -86,7 +86,7 @@ fun ArticuloRow(articulo: ArticuloEntity) {
             ) {
                 Spacer(modifier = Modifier.width(15.dp))
                 Text(
-                    text = "Numeritos: ${articulo.num}"
+                    text = "Numeritos: ${articulo.existencia}"
                 )
 
             }
@@ -101,14 +101,14 @@ fun DefaultPreview() {
     val lista = listOf(
 
         ArticuloEntity(
-            variable1 = "Prueba1",
-            variable2 = "funciona",
-            num = 10.00
+            descripcion = "Prueba1",
+            marca = "funciona",
+            existencia = 10.00
         ),
         ArticuloEntity(
-            variable1 = "Prueba2",
-            variable2 = "sigue funcionando",
-            num = 20.00
+            descripcion = "Prueba2",
+            marca = "sigue funcionando",
+            existencia = 20.00
         )
     )
 
