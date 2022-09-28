@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import edu.ucne.parcial1_anderson.data.entity.RegistroEntity
 
 @Database(
-    version = 1,
+    version = 2,
     entities = [RegistroEntity::class],
     exportSchema = false
 )

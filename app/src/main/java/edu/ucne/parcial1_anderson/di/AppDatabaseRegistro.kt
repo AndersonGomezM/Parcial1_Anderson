@@ -10,7 +10,6 @@ import dagger.hilt.components.SingletonComponent
 import edu.ucne.parcial1_anderson.data.RegistroDb
 import javax.inject.Singleton
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 object AppDatabaseRegistro {
