@@ -1,4 +1,4 @@
-package edu.ucne.parcial1_anderson.ui.registro
+package edu.ucne.parcial1_anderson.ui.articulo
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
@@ -12,10 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import edu.ucne.parcial1_anderson.data.entity.RegistroEntity
 
 @Composable
-fun RegistroScreen(
+fun ArticuloScreen(
     onNavigateBack: () -> Unit,
     /*viewModel: RegistroViewModel = hiltViewModel()*/
 ) {
@@ -29,7 +28,7 @@ fun RegistroScreen(
                     Toast.LENGTH_SHORT
                 ).show()
             }) {
-                Icon(imageVector = Icons.Default.Create, contentDescription = "Agregar un registro")
+                Icon(imageVector = Icons.Default.Create, contentDescription = "Agregar un articulo")
             }
         }
     ) {

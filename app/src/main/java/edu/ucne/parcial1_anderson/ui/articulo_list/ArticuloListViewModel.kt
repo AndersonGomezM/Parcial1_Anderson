@@ -1,27 +1,26 @@
-package edu.ucne.parcial1_anderson.ui.registro_list
+package edu.ucne.parcial1_anderson.ui.articulo_list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import edu.ucne.parcial1_anderson.data.RegistroDb
-import edu.ucne.parcial1_anderson.data.entity.RegistroEntity
+import edu.ucne.parcial1_anderson.data.entity.ArticuloEntity
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-data class RegistroListUiState(
-    val registros: List<RegistroEntity> = emptyList(),
+data class ArticuloListUiState(
+    val registros: List<ArticuloEntity> = emptyList(),
     val text: String = "Meeting"
 )
 
 @HiltViewModel
-class RegistroListViewModel @Inject constructor(
-    /*val repository: Registrorepository*/
+class ArticuloListViewModel @Inject constructor(
+    /*val repository: ArticuloRepository*/
 ): ViewModel() {
-    private val _uiState = MutableStateFlow(RegistroListUiState())
-    val uiState: StateFlow<RegistroListUiState> = _uiState.asStateFlow()
+    private val _uiState = MutableStateFlow(ArticuloListUiState())
+    val uiState: StateFlow<ArticuloListUiState> = _uiState.asStateFlow()
 
     init {
         viewModelScope.launch {

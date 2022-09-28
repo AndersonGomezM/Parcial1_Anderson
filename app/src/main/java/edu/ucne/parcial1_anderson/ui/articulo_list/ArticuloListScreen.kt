@@ -1,4 +1,4 @@
-package edu.ucne.parcial1_anderson.ui.registro_list
+package edu.ucne.parcial1_anderson.ui.articulo_list
 
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -18,12 +18,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import edu.ucne.parcial1_anderson.data.entity.RegistroEntity
+import edu.ucne.parcial1_anderson.data.entity.ArticuloEntity
 
 @Composable
-fun RegistroListScreen (
+fun ArticuloListScreen (
     onClick: () -> Unit,
-    viewModel: RegistroListViewModel = hiltViewModel()
+    viewModel: ArticuloListViewModel = hiltViewModel()
 ) {
     Scaffold (
         floatingActionButton = {
@@ -38,8 +38,8 @@ fun RegistroListScreen (
             .fillMaxSize()
             .padding(it)
         ) {
-            RegistroList(
-                registros = uiState.registros,
+            ArticuloList(
+                articulos = uiState.registros,
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(it)
@@ -49,19 +49,19 @@ fun RegistroListScreen (
 }
 
 @Composable
-fun RegistroList(
-    registros: List<RegistroEntity>,
+fun ArticuloList(
+    articulos: List<ArticuloEntity>,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(modifier = modifier) {
-        items(registros) { registro ->
-            RegistroRow(registro)
+        items(articulos) { articulo ->
+            ArticuloRow(articulo)
         }
     }
 }
 
 @Composable
-fun RegistroRow(registro: RegistroEntity) {
+fun ArticuloRow(articulo: ArticuloEntity) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -76,7 +76,7 @@ fun RegistroRow(registro: RegistroEntity) {
             Row() {
                 Spacer(modifier = Modifier.width(15.dp))
                 Text(
-                    text = registro.variable1,
+                    text = articulo.variable1,
                     style = MaterialTheme.typography.titleLarge
                 )
             }
@@ -86,7 +86,7 @@ fun RegistroRow(registro: RegistroEntity) {
             ) {
                 Spacer(modifier = Modifier.width(15.dp))
                 Text(
-                    text = "Numeritos: ${registro.num}"
+                    text = "Numeritos: ${articulo.num}"
                 )
 
             }
@@ -100,17 +100,17 @@ fun RegistroRow(registro: RegistroEntity) {
 fun DefaultPreview() {
     val lista = listOf(
 
-        RegistroEntity(
+        ArticuloEntity(
             variable1 = "Prueba1",
             variable2 = "funciona",
             num = 10.00
         ),
-        RegistroEntity(
+        ArticuloEntity(
             variable1 = "Prueba2",
             variable2 = "sigue funcionando",
             num = 20.00
         )
     )
 
-    RegistroList(registros = lista)
+    ArticuloList(articulos = lista)
 }

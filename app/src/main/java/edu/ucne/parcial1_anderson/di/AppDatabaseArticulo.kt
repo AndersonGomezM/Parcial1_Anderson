@@ -7,19 +7,19 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import edu.ucne.parcial1_anderson.data.RegistroDb
+import edu.ucne.parcial1_anderson.data.ArticuloDb
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppDatabaseRegistro {
+object AppDatabaseArticulo {
     @Singleton
     @Provides
-    fun providesDatabase(@ApplicationContext context: Context): RegistroDb {
+    fun providesDatabase(@ApplicationContext context: Context): ArticuloDb {
         return Room.databaseBuilder(
             context,
-            RegistroDb::class.java,
-            "Registro.db"
+            ArticuloDb::class.java,
+            "Articulo.db"
         ).fallbackToDestructiveMigration().build()
     }
 }

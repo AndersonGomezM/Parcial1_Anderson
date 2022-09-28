@@ -1,21 +1,23 @@
 package edu.ucne.parcial1_anderson.ui.navigation
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Menu
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 
 @Composable
 fun HomeScreen(
-    onClickRegistro: () -> Unit
+    onClickArticulo: () -> Unit
 ) {
-    Inicio(onClickRegistro)
+    Inicio(onClickArticulo)
 }
-
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun Inicio(onClickRegistro: () -> Unit) {
+fun Inicio(onClickArticulo: () -> Unit) {
     var expanded by remember {
         mutableStateOf(false)
     }
@@ -28,8 +30,8 @@ fun Inicio(onClickRegistro: () -> Unit) {
     Scaffold (
         modifier = Modifier.fillMaxSize(),
         contentColor = MaterialTheme.colors.background
-    ) {
-        Button(onClick = onClickRegistro) {
+    ){
+        Button(onClick = onClickArticulo) {
             Text(text = "Boton para los registros")
         }
     }

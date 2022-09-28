@@ -1,17 +1,15 @@
 package edu.ucne.parcial1_anderson.data
 
-import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
-import edu.ucne.parcial1_anderson.data.entity.RegistroEntity
+import edu.ucne.parcial1_anderson.data.entity.ArticuloEntity
 
 @Database(
     version = 2,
-    entities = [RegistroEntity::class],
+    entities = [ArticuloEntity::class],
     exportSchema = false
 )
-abstract class RegistroDb : RoomDatabase() {
+abstract class ArticuloDb : RoomDatabase() {
     /*abstract val registroDao: String*/
 
 }

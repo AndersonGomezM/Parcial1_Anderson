@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 /*@Dao*/
 @Entity(tableName = "Registros")
-class RegistroEntity (
+class ArticuloEntity (
     @PrimaryKey(autoGenerate = true)
     val registroId: Int = 0,
     val variable1: String,
