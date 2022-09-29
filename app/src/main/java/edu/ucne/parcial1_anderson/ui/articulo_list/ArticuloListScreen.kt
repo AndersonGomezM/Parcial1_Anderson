@@ -38,6 +38,16 @@ fun ArticuloListScreen (
             .fillMaxSize()
             .padding(it)
         ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+            ) {
+                Text(text = "Lista de Articulos",
+                    color = Color.White,
+                    style = MaterialTheme.typography.titleLarge
+                )
+            }
+            Spacer(modifier = Modifier.height(15.dp))
             ArticuloList(
                 articulos = uiState.articulos,
                 modifier = Modifier
@@ -86,7 +96,11 @@ fun ArticuloRow(articulo: ArticuloEntity) {
             ) {
                 Spacer(modifier = Modifier.width(15.dp))
                 Text(
-                    text = "Numeritos: ${articulo.existencia}"
+                    text = "Marca: ${articulo.marca}"
+                )
+                Spacer(modifier = Modifier.width(15.dp))
+                Text(
+                    text = "Existencia: ${articulo.existencia}"
                 )
 
             }
